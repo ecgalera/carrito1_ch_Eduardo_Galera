@@ -1,25 +1,30 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
+import  "../navBar/NavBars.css"
+import CartWidget from '../CartWidget';
+
+
+
 
 function Navbars() {
   return (
-    <>
+    <div>
       <Navbar bg="light" variant="light">
         <Container>
           <Navbar.Brand href="#home">MyShop</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#productos">Productos</Nav.Link>
-            <Nav.Link href="#pricing">Servicios</Nav.Link>
-             <CartWidget/>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/product">Productos</Link></li>
+            <li href="#pricing">Servicios</li>
+           <CartWidget/>
           </Nav>
         </Container>
       </Navbar>
-      <br />
+      
      
-    </>
+    </div>
   );
 }
 
